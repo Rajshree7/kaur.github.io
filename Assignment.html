@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Assignment 3</title>
+    <!-- <link rel="stylesheet" href="styles.css"> -->
+    <script src="/script.js"></script>
+    <style>#box1{
+        background-color: rgb(205, 92, 92);
+        padding: 50px;
+        border-style:inset;
+        border-width: 0px;
+        border-color: beige;
+        margin-left: 10px;
+        margin-right: 10px;
+        margin-bottom: 20px;
+        text-align: center;
+    }
+    
+    
+    #box2{
+    background-color: rgb(240, 128, 128);
+    padding: 50px;
+    border-style:inset;
+    border-width: 0px;
+    border-color: beige;
+    margin-left: 10px;
+    margin-right: 10px;
+    margin-bottom: 20px;
+    text-align: center;
+    }
+    
+    #box3{
+        background-color: rgb(250, 128, 114);
+        padding: 50px;
+        border-style:inset;
+        border-width: 0px;
+        border-color: beige;
+        margin-left: 10px;
+        margin-right: 10px;
+        margin-bottom: 20px;
+        text-align: center;
+        }
+    
+    #imgg{
+        display: none;
+        margin-left: 550px;
+    }
+    </style>
+</head>
+<body style="background-color:#C96D48 ;">
+    
+    <br><br>
+    
+    <div id="box1"  >
+
+        <button onmouseover="pingAlert(this);" style="font-size: x-large;">NAME AND ID</button>
+        
+    </div>
+
+    <div id="box2">
+        
+        <img onmouseout="normPic(this);" onmouseover="largerPic(this);"  src="ali.gif" alt="" width="320px" height="240px">
+        <br>
+        <p onmouseout="normTxt(this);" onmouseover="largerTxt(this);" id="boxtxt"><b>ali the great</b></p>
+
+    </div>
+
+    <div id="box3">
+        <h2>rajshree_202000370@smit.smu.edu.in</h2>
+    </div>
+
+    <script>
+        function myFunction(){
+            var x = document.getElementById("mySelect").value;
+            document.getElementById("demo").innerHTML ="You Selected : " + x;
+        }
+
+        function largerPic(x){
+            x.style.width = "640px";
+            x.style.height = "360px";
+        }
+
+        function normPic(x){
+            x.style.width = "320px";
+            x.style.height = "180px";
+        }
+
+        function normTxt(y){
+            document.getElementById("boxtxt").style.fontSize = "large";
+        }
+        
+        
+        function largerTxt(y){
+            document.getElementById("boxtxt").style.fontSize = "xx-large";
+        }
+
+        function pingAlert(z){
+            alert("Name: rajshree \nRegistration No: 202000370 ");
+        }
+    </script>
+</body>
+</html>
